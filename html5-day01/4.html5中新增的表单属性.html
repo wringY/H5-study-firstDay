@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html5中新增的表单属性</title>
+</head>
+
+<body>
+    <form action="" id="myForm">
+        <!-- placeholder 占位符，当输入文本是会自动清除占位，当没有文本时会返回占位 -->
+        <!-- autofocus 页面加载后，自动获得焦点 -->
+        用户名：<input type="text" placeholder="请输入用户名" autofocus> <br>
+        <!-- required 必需的 如果不填写 无法提交 -->
+        <!-- multiple 如果为email类型，则可以提交多个邮箱地址，以逗号分开  -->
+        电子邮箱： <input type="email" required> <br>
+        <!-- autocomplete 会提示之前填过的内容，需要两个前提条件：1.必须成功提交过 2.必须有name属性 -->
+        <!-- pattern 正则验证 -->
+        手机号码：<input type="tel" name="userTel" autocomplete pattern="^(\+86)?1\d{10}"> <br>
+        网址：<input type="url"> <br>
+        请输入数量：<input type="number" max="100" min="0" value="20"> <br>
+        范围：<input type="range" max="200" min="10" value="50"><br>
+        颜色选取版：<input type="color"> <br>
+        请输入商品名字：<input type="search"> <br>
+        时分：<input type="time"> <br>
+        年月日的选择：<input type="date"> <br>
+        年月日时分的选择：<input type="datetime-local"> <br>
+        月份的选择：<input type="month"> <br>
+        周的选择：<input type="week"> <br>
+        <!-- multiple 如果为file类型，则可以提交多个文件-->
+        提交文件：<input type="file" multiple> <br>
+        <input type="submit"> <br>
+        <!-- form 属性 可以把当前的input控件关联到 指定ID名的form表单 -->
+        外部的提交：<input type="text" form="myForm" name="waibu">
+    </form>
+</body>
+
+</html>

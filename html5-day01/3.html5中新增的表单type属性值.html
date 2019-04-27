@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html5中新增的表单type属性值</title>
+</head>
+<body>
+    <!-- html5中新增的表单type属性 -->
+    <form action="">
+        <!-- email  可以：验证邮箱格式，不符合格式自动弹出警示框-->
+      电子邮箱：  <input type="email"> <br>
+        <!-- tel 作用：可以在移动端弹出数字键盘 -->
+      手机号码：<input type="tel"> <br>
+      <!-- url 可以：验证网站格式，不符合格式自动弹出警示框 -->
+      网址：<input type="url"> <br>
+      <!-- number 只能输入数字，可以设置数值范围和初始值 -->
+      请输入数量：<input type="number" max="100" min="0" value="20"> <br>
+      <!-- range 一个拉杆，可以设置数值的范围和初始值 -->
+      范围：<input type="range" max="200" min="10" value="50"><br>
+      <!-- color 可以选取颜色 -->
+      颜色选取版：<input type="color"> <br>
+      <!-- search 可以清除键入的内容 -->
+      请输入商品名字：<input type="search"> <br>
+      <!-- time 可以输入时分的选择 -->
+      时分：<input type="time"> <br>
+      <!-- date 可以输入年月日的选择 -->
+      年月日的选择：<input type="date"> <br>
+      <!-- datetime-local 年月日时分的选择 -->
+      年月日时分的选择：<input type="datetime-local"> <br>
+      <!-- month 月份的选择 -->
+      月份的选择：<input type="month"> <br>
+      <!-- week 最终是周的选择 -->
+      周的选择：<input type="week"> <br>
+        <input type="submit">
+    </form>
+</body>
+</html>

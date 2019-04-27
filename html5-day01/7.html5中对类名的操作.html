@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html5中对类名的操作</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+        .blue {
+            color: blue;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        input {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>JS</li>
+        <li class="green underline">TS</li>
+        <li class="underline">JAVA</li>
+        <li >C++</li>
+        <li>C#</li>
+    </ul>
+    <input type="button" value="给第一个li添加样式" id="first">
+    <input type="button" value="给第二个li移除样式" id="second">
+    <input type="button" value="给第三个li切换样式" id="third">
+    <input type="button" value="判断第四个li是否有样式" id="fourthly">
+
+    <script>
+        // 添加类名，通过classList的add方法。
+        document.getElementById('first').onclick = function () {
+        document.querySelector('li').classList.add("blue",'underline');
+        }
+            // 删除类名，通过classList的remove方法
+        document.getElementById('second').onclick = function () {
+            document.querySelectorAll('li')[1].classList.remove('green','underline');
+        }
+    //  切换类名，通过classList的toggle方法，有删除，没有添加 参数只有一个
+    document.getElementById('third').onclick = function () {
+            document.querySelectorAll('li')[2].classList.toggle('green');
+        }
+        // 判断是否包含某个类名，通过classList的contains方法. 参数只有一个
+        document.getElementById('fourthly').onclick = function () {
+          var result =  document.querySelectorAll('li')[2].classList.contains('green');
+          console.log(result);
+          
+        }
+    </script>
+</body>
+</html>

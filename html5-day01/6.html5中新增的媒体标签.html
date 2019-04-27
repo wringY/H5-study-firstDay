@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html5中新增的媒体标签</title>
+    <style>
+        #box {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- audio 播放音频 -->
+    <!-- src 播放音频的文件路径 -->
+    <!-- controls 显示控制面板 -->
+    <!-- autoplay -->
+    <!-- loop 循环 -->
+    <!-- muted 静音 -->
+    <!-- <audio src="./mp3/aa.mp3" controls autoplay></audio> -->
+
+
+    <!-- video 播放视频 -->
+     <!-- src 播放音频的文件路径 -->
+    <!-- controls 显示控制面板 -->
+    <!-- autoplay -->
+    <!-- loop 循环 -->
+    <!-- muted 静音 -->
+    <!-- poster 封面 -->
+    <!-- width 视频的宽 -->
+    <!-- height s视频的高 -->
+    <!-- 视频是需要等比例缩放的，如果我们不清楚视频的比例，而设置 宽 和 高 时，会变成设置视频所占区域的大小，并不是视频本身的大小 -->
+    <!-- <video src="./mp3/mp4.mp4"  id="video" height="400" width="711"></video> -->
+    <!-- 简单方式：设宽、高中任意一项，会自动等比例缩放 -->
+    <!-- 其他方式：查看videoHeight 和 videoWidth ,计算比例，进行设置 -->
+    <!-- 第二中方式：给video 添加父元素，给出宽高，让video 铺满整个父元素即可，强制改变宽高比 -->
+    <div id="box">
+        <video src="./mp3/mp4.mp4"  id="video" style="width: 100%; height: 100%; object-fit:fill"></video>
+    </div>
+    <!-- source标签： 当浏览器不兼容 video中的视频格式，我们需要上传多个视频文件，让浏览器自上而下的查找兼容的格式 -->
+    <video>
+        <source src="./mp3/mp4.mp4">
+        <source src="./mp3/flv.flv">
+    </video>
+    
+
+</body>
+
+<script>
+  
+    
+    
+    
+
+</script>
+</html>

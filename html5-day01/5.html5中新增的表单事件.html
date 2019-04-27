@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html5中新增的表单事件</title>
+</head>
+<body>
+    <form action="">
+        用户名：<input type="text" placeholder="请输入用户名" id="userName"> <br>
+        邮箱：<input type="email" id="email"> <br>
+        <span id="placeholder"></span> <br>
+        范围：<input type="range" id="range"> <br>
+    
+        <input type="submit">
+    </form>
+
+    <script>
+        // 1.oninput 当内容改变时触发
+        document.getElementById("userName").oninput = function () {
+            console.log(this.value);
+                    }
+        // 2.onkeyup 键盘弹起触发，每按下一次键就会触发一次事件。
+        // 3.onchange 当内容改变且失去焦点触发。
+        // 3.oninvalid 当验证不通过触发
+        document.getElementById('email').oninvalid = function () {
+            // console.log(1);
+            // setCustomValidity 修改默认的提示内容
+            this.setCustomValidity("哈哈哈");
+        }
+    
+    </script>
+</body>
+</html>

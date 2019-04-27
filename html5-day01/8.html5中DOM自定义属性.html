@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html5中DOM自定义属性</title>
+</head>
+<body>
+    <!-- 如何添加自定义属性：data- 开头， 后面每个需要分隔地方以 - 进行分隔 -->
+    <div data-contry-province="中国" id="box"></div>
+
+    <script>
+    // 如何获取自定义属性的值：
+    // 自定义属性都在DOM元素的dataset属性级（是个对象）中，以键值对的形式保存着，它的原型DOMStringMap.
+      console.log(document.getElementById('box').dataset.contryProvince);
+    //   修改
+    document.getElementById('box').dataset.contryProvince = '美国';
+    console.log(document.getElementById('box').dataset.contryProvince);
+    
+    // 我们可以通过DOM.property 的方法，自定义属性，自定义属性的值可以是对象类型。
+    document.getElementById('box').index  = {name:'黑麻麻',age:21};
+    console.dir(document.getElementById('box'));
+    console.log(document.getElementById('box').index);
+
+    // 还可以通过DOM的attribute 的方法，创建自定义属性并赋值。
+    // 注意这种方法不能写在：DOM元素的属性中，而是写在标签中，并且我们无法以对象的形式调用属性。
+    document.getElementById('box').setAttribute("log",{dogName: "小明明",age: 3});
+    console.dir(document.getElementById('box'));
+    console.log(document.getElementById('box').getAttribute('log'));
+    
+    
+    </script>
+</body>
+</html>
